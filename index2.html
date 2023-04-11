@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <title>form data to local storage</title>
+</head>
+<body>
+    <header>
+        <h1 class="text-center" >Book Your Rooms</h1>
+        <hr>
+    </header>
+    <form id="addform">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="yourname" class="form-control" name="visitor_name" placeholder="John Doe" pattern=[A-Z\sa-z]{3,20} required>
+        </div>
+        <div class="form-group">
+          <label for="email">Your E-mail</label>
+          <input type="email" id="email" class="form-control" name="visitor_email" placeholder="john.doe@email.com" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Your Phone</label>
+          <input type="tel" id="phone" class="form-control" name="visitor_phone" placeholder="498-348-3872" pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
+        </div>
+        <input type="hidden" id="userId" name="userId">
+        <hr>
+        
+        <button type="submit" class="btn btn-block btn-dark" value="submit" method="POST" id="button">Book The Rooms</button>
+        
+      </form>
+      <ul id="list-group">
+    
+      </ul>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+    <script src="E:\booingAppointmentProject\frontend\dom2.js"></script>
+</body>
+</html>
